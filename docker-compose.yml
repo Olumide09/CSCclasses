@@ -1,12 +1,20 @@
 version: '3'
-
 services:
   database:
     container_name: postgres-csc2020
-    image: postgres:latest 
-    ports: 
-      - "5437:5432"    
+    image: postgres:latest
+    ports:
+      - "5433:5432"
+    volumes:
+      - /var/lib/postgresql/data
     env_file:
       - csc2020.env
-    volumes:  
-      - /var/lib/postgresql/data 
+
+  web:
+    container_name: nginx-csc2020
+    build:
+      context: .
+      dockerfile: nginx-primer/Dockerfile
+    ports:
+      - 80:80
+      - 443:443
