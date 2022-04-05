@@ -4,7 +4,7 @@ services:
     container_name: postgres-csc2020
     image: postgres:latest
     ports:
-      - "5433:5432"
+      - "5437:5432"
     volumes:
       - /var/lib/postgresql/data
     env_file:
