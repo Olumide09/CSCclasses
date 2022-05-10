@@ -1,9 +1,22 @@
-var logger = function(output){
-    console.log(output)
-    }
-    export var appName = "ES6 Review";
-    export var dummyFunction = function(){
+export var appName = "ES6 Review";
+export var dummyFunction = function () {
     return "I am a dummy function";
-    }
-    export default logger; 
-    
+}
+
+var logger = (output) => {
+console.log (output)
+}
+
+
+var functionwithnoparameter = () => {
+    console.log ("no parameter is passed")
+}
+
+
+
+
+
+
+
+
+export default logger;
